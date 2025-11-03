@@ -36,7 +36,7 @@ export const TickerStrip = () => {
       <div className="ticker-scroll">
         {repeated.map((t, i) => (
           <div key={i} className={`ticker-item ${t.isPositive ? "up" : "down"}`}>
-            <span className="symbol">{t.symbol}</span>
+            <span className="symbol">{t.name}</span>
             <span className="price">{t.price?.toLocaleString("en-IN") ?? "N/A"}</span>
             <span className="change">
               {t.changePct != null ? (
