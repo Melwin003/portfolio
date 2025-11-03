@@ -14,7 +14,7 @@ export const TickerStrip = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch("http://localhost:4000/api/ticker");
+        const res = await fetch("https://tickerstrip.melwin-shibu003.workers.dev");
         const json = await res.json();
         setTickers(json.tickers || []);
       } catch (err) {
